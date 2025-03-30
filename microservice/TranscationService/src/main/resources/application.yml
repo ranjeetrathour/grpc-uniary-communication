@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name:
+  hikari:
+    connectionTimeout:
+    maximumPoolSize:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+      use_sql_comments: true
+    show-sql: false
+
+server:
+  tomcat:
+    max-swallow-size: -1
+  servlet:
+    context-path: /user/api
+  port: 8443
