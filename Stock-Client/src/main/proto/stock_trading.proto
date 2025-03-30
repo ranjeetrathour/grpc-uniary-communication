@@ -1,0 +1,25 @@
+
+syntax = "proto3";
+package stocktrading;
+option java_multiple_files = true;  //this is used to generate the below call as individual class
+option java_package = "com.mytrade";
+option java_outer_classname = "StockTradingProto";
+
+
+service StockTradingService{
+
+    rpc getStockPrice(StockRequest) returns (StockResponse);
+
+    rpc createStock(StockResponse) returns (StockResponse);
+}
+
+message StockRequest{
+    string stock_symbol =1;   //1 is used to denote the tag value which is use to serialization and deserialization
+}
+
+
+message StockResponse{
+    string stock_symbol=1;
+    double stock_price=2;
+    string timeStamp=3;
+}
