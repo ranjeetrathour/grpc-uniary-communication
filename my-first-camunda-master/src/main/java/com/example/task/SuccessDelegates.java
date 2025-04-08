@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class SuccessDelegates implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
+
         System.out.println("success");
     }
 }
