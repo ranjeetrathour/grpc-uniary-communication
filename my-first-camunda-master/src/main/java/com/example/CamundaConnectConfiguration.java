@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class CamundaConnectConfiguration {
-
     @Bean
     public ConnectProcessEnginePlugin connectProcessEnginePlugin(){
         return new ConnectProcessEnginePlugin();
